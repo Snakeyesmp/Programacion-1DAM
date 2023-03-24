@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public abstract class Mascotas {
+public abstract class Mascota {
 
     private String nombre, estado;
     private int edad;
@@ -25,4 +25,6 @@ public abstract class Mascotas {
         return "A las buenas tardes, soy una animal que habla";
     }
 
+
+    Perro Jaime = new Perro("doberman", false);
 }

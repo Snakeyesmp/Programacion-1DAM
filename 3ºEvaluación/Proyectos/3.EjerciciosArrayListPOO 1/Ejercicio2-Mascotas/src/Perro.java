@@ -1,7 +1,7 @@
-public class Perro extends Mascotas {
+public class Perro extends Mascota {
 
     private String raza;
-    private int pulgas;
+    private boolean pulgas;
 
     public String muestra() {
         return null;
@@ -11,4 +11,10 @@ public class Perro extends Mascotas {
 
         return "Soy un perro que habla";
     }
+
+    public Perro(String raza, boolean pulgas) {
+        this.raza = raza;
+        this.pulgas = pulgas;
+    }
+
 }
