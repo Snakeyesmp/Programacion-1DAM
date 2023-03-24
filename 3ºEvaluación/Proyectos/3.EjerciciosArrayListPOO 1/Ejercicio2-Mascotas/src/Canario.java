@@ -1,0 +1,16 @@
+public class Canario extends Aves{
+    private String color;
+    private boolean canta;
+
+    public String muestra(){
+        return null;
+    }
+
+    public String habla(){
+        return "Soy un canario que habla(Canario el pájaro, no una persona procedente de canarias)";
+    }
+
+    public String volar(){
+        return "*vuela*";
+    }
+}
