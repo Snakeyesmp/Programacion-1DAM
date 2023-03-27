@@ -6,14 +6,11 @@ public abstract class Mascota {
     private int edad;
     private static LocalDate fechaNacimiento;
 
-    public String muestra() {
+    abstract void muestra();
+    abstract void habla();
 
-        return null;
-    }
-
-    public LocalDate cumpleaños() {
-
-        return LocalDate.of(2002, 10, 20);
+    public String cumpleaños() {
+        return "Feliz cumpleaños";
     }
 
     public String morir() {
@@ -21,13 +18,41 @@ public abstract class Mascota {
         return "muelto";
     }
 
-    public String habla() {
-        return "A las buenas tardes, soy un animal que habla";
-    }
-
     @Override
     public String toString() {
         return " nombre=" + nombre + ", estado=" + estado + ", edad=" + edad;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public void setEstado(String estado) {
+        this.estado = estado;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public static LocalDate getFechaNacimiento() {
+        return fechaNacimiento;
+    }
+
+    public static void setFechaNacimiento(LocalDate fechaNacimiento) {
+        Mascota.fechaNacimiento = fechaNacimiento;
     }
 
 

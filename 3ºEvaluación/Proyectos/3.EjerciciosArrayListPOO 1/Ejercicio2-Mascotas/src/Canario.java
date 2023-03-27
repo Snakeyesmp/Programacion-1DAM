@@ -2,16 +2,12 @@ public class Canario extends Aves {
     private String color;
     private boolean canta;
 
-    public String muestra() {
-        return null;
+    public void habla() {
+        System.out.println("Soy un canario que habla(Canario el pájaro, no una persona procedente de canarias)");
     }
 
-    public String habla() {
-        return "Soy un canario que habla(Canario el pájaro, no una persona procedente de canarias)";
-    }
-
-    public String volar() {
-        return "*vuela*";
+    public void volar() {
+        System.out.println("*vuela*");
     }
 
     public Canario(String pico, boolean vuela, String color, boolean canta) {
@@ -21,8 +17,30 @@ public class Canario extends Aves {
     }
 
     @Override
-    public String toString() {
-        return "color=" + color + ", canta=" + canta;
+    public void muestra() {
+        String palabracorta;
+        if (canta) {
+            palabracorta = "si";
+        } else {
+            palabracorta = "no";
+        }
+        System.out.println("color: " + color + ",canta: " + palabracorta);
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public boolean isCanta() {
+        return canta;
+    }
+
+    public void setCanta(boolean canta) {
+        this.canta = canta;
     }
 
 }

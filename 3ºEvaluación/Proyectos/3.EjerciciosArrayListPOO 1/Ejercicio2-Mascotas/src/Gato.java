@@ -2,13 +2,8 @@ public class Gato extends Mascota {
     private String color;
     private boolean peloLargo;
 
-    public String muestra() {
-        return null;
-
-    }
-
-    public String habla() {
-        return "Soy un gato que habla";
+    public void habla() {
+        System.out.println("Soy un gato que habla, a las buenas tardes");
     }
 
     public Gato(String color, boolean peloLargo) {
@@ -17,8 +12,31 @@ public class Gato extends Mascota {
     }
 
     @Override
-    public String toString() {
-        return "color=" + color + ", peloLargo=" + peloLargo;
+    public void muestra() {
+        String palabracorta;
+        if (peloLargo) {
+            palabracorta = "si";
+        } else {
+            palabracorta = "no";
+        }
+
+        System.out.println("color: " + color + ",peloLargo: " + palabracorta);
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public boolean isPeloLargo() {
+        return peloLargo;
+    }
+
+    public void setPeloLargo(boolean peloLargo) {
+        this.peloLargo = peloLargo;
     }
 
 }
