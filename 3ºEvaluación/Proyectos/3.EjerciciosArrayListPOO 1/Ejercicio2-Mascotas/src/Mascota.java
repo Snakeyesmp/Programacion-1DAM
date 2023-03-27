@@ -25,6 +25,4 @@ public abstract class Mascota {
         return "A las buenas tardes, soy una animal que habla";
     }
 
-
-    Perro Jaime = new Perro("doberman", false);
 }

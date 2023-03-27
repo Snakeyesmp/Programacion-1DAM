@@ -17,6 +17,6 @@ public class Inventario {
 
         // fechaNacimiento=LocalDate.of(2022,10,21);
 
-        System.out.println();
+        
     }
 }
