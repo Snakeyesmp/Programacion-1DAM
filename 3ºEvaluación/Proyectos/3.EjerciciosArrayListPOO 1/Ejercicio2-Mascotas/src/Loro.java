@@ -19,4 +19,11 @@ public class Loro extends Aves {
         this.origen = origen;
         this.habla = habla;
     }
+
+    @Override
+    public String toString() {
+        return "origen=" + origen + ", habla=" + habla;
+    }
+
+    
 }

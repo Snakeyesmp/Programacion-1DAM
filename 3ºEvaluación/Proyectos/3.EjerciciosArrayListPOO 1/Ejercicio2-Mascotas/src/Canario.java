@@ -19,4 +19,10 @@ public class Canario extends Aves {
         this.color = color;
         this.canta = canta;
     }
+
+    @Override
+    public String toString() {
+        return "color=" + color + ", canta=" + canta;
+    }
+
 }

@@ -22,7 +22,13 @@ public abstract class Mascota {
     }
 
     public String habla() {
-        return "A las buenas tardes, soy una animal que habla";
+        return "A las buenas tardes, soy un animal que habla";
     }
+
+    @Override
+    public String toString() {
+        return " nombre=" + nombre + ", estado=" + estado + ", edad=" + edad;
+    }
+
 
 }

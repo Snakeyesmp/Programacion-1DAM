@@ -16,4 +16,9 @@ public class Gato extends Mascota {
         this.peloLargo = peloLargo;
     }
 
+    @Override
+    public String toString() {
+        return "color=" + color + ", peloLargo=" + peloLargo;
+    }
+
 }

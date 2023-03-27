@@ -12,4 +12,9 @@ public abstract class Aves extends Mascota {
         this.vuela = vuela;
     }
 
+    @Override
+    public String toString() {
+        return "pico=" + pico + ", vuela=" + vuela;
+    }
+
 }

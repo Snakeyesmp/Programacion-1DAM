@@ -17,4 +17,9 @@ public class Perro extends Mascota {
         this.pulgas = pulgas;
     }
 
+    @Override
+    public String toString() {
+        return "raza=" + raza + ", pulgas=" + pulgas;
+    }
+
 }
