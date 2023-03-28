@@ -47,7 +47,13 @@ public abstract class Mascota {
     public void setFechaNacimiento(String fechaNacimiento) {
         this.fechaNacimiento = fechaNacimiento;
     }
-
+    /**
+     * 
+     * @param nombre
+     * @param edad
+     * @param estado
+     * @param fechanac
+     */
     public Mascota(String nombre, int edad, String estado, String fechanac) {
         this.nombre = nombre;
         this.edad = edad;

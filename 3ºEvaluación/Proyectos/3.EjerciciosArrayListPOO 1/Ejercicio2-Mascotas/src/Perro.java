@@ -6,13 +6,22 @@ public class Perro extends Mascota {
     public void habla() {
         System.out.println("Soy un perro que habla, buenas tardes");
     }
-
+    /**
+     * Constructor de perro
+     * 
+     * @param nombre
+     * @param edad
+     * @param estado
+     * @param fechanac
+     * @param raza
+     * @param pulgas
+     */
     public Perro(String nombre, int edad, String estado, String fechanac, String raza, boolean pulgas) {
         super(nombre, edad, estado, fechanac);
         this.raza = raza;
         this.pulgas = pulgas;
     }
-
+    
     @Override
     public void muestra() {
   

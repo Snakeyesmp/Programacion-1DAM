@@ -1,7 +1,14 @@
 import java.util.ArrayList;
 import java.util.Scanner;
-
+/**
+ * Clase main en la que se crearán varios objetos de tipo mascota, y el menú para que el usuario opere
+ * 
+ */
 public class Principal {
+    /**
+     * 
+     * @param args
+     */
     public static void main(String[] args) {
 
         Inventario inventario1 = new Inventario();
@@ -63,9 +70,6 @@ public class Principal {
                     break;
             }
         } while (opcion != 0);
-        // System.out.println(doraemon.getClass().getSimpleName()); getClass() devuelve
-        // "Class Gato" y con el getSimpleName te devuelve el nombre de la clase
-        // solamente
         sc.close();
         System.out.println("Ha salido del programa existosamente");
     }
