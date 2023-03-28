@@ -1,12 +1,11 @@
-import java.time.LocalDate;
-
 public abstract class Mascota {
 
     private String nombre, estado;
     private int edad;
-    private static LocalDate fechaNacimiento;
+    private String fechaNacimiento;
 
     abstract void muestra();
+
     abstract void habla();
 
     public String cumpleaños() {
@@ -14,13 +13,7 @@ public abstract class Mascota {
     }
 
     public String morir() {
-
         return "muelto";
-    }
-
-    @Override
-    public String toString() {
-        return " nombre=" + nombre + ", estado=" + estado + ", edad=" + edad;
     }
 
     public String getNombre() {
@@ -47,13 +40,19 @@ public abstract class Mascota {
         this.edad = edad;
     }
 
-    public static LocalDate getFechaNacimiento() {
+    public String getFechaNacimiento() {
         return fechaNacimiento;
     }
 
-    public static void setFechaNacimiento(LocalDate fechaNacimiento) {
-        Mascota.fechaNacimiento = fechaNacimiento;
+    public void setFechaNacimiento(String fechaNacimiento) {
+        this.fechaNacimiento = fechaNacimiento;
     }
 
+    public Mascota(String nombre, int edad, String estado, String fechanac) {
+        this.nombre = nombre;
+        this.edad = edad;
+        this.estado = estado;
+        this.fechaNacimiento = fechanac;
+    }
 
 }

@@ -7,20 +7,27 @@ public class Perro extends Mascota {
         System.out.println("Soy un perro que habla, buenas tardes");
     }
 
-    public Perro(String raza, boolean pulgas) {
+    public Perro(String nombre, int edad, String estado, String fechanac, String raza, boolean pulgas) {
+        super(nombre, edad, estado, fechanac);
         this.raza = raza;
         this.pulgas = pulgas;
     }
 
     @Override
     public void muestra() {
+  
         String palabracorta;
         if (pulgas) {
             palabracorta = "si";
         } else {
             palabracorta = "no";
         }
-        System.out.println("raza:" + raza + ",pulgas: " + palabracorta);
+        System.out.println("Nombre : " + this.getNombre());
+        System.out.println("Edad   : " + this.getEdad());
+        System.out.println("Estado : " + this.getEstado());
+        System.out.println("Nacido : " + this.getFechaNacimiento());
+        System.out.println("Raza   : " + this.getRaza());
+        System.out.println("pulgas : " + palabracorta);
     }
 
     public String getRaza() {

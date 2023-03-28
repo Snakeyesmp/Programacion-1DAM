@@ -3,24 +3,13 @@ public abstract class Aves extends Mascota {
     private String pico;
     private boolean vuela;
 
-    public void volar() {
-        System.out.println("*vuela*");
-    }
+    public abstract void volar();
+    
 
-    public Aves(String pico, boolean vuela) {
+    public Aves(String nombre, int edad, String estado, String fechanac, String pico, boolean vuela) {
+        super(nombre, edad, estado, fechanac);
         this.pico = pico;
         this.vuela = vuela;
-    }
-
-    @Override
-    public void muestra() {
-        String palabracorta;
-        if (vuela) {
-            palabracorta = "si";
-        } else {
-            palabracorta = "no";
-        }
-        System.out.println("pico: " + pico + ",vuela:" + palabracorta);
     }
 
     public String getPico() {
