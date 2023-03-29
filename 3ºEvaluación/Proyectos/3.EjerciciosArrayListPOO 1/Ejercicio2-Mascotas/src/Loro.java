@@ -9,7 +9,17 @@ public class Loro extends Aves {
     public void volar() {
         System.out.println("*vuela*");
     }
-
+    /**
+     * 
+     * @param nombre El nombre del loro
+     * @param edad el numero de años del loro
+     * @param estado como se encuentra el loro
+     * @param fechanac año-mes-dia de nacimiento del loro
+     * @param pico el color del pico
+     * @param vuela para saber si vuela o no
+     * @param origen La procedencia del loro
+     * @param habla Para saber si habla o no habla
+     */
     public Loro(String nombre, int edad, String estado, String fechanac, String pico, boolean vuela, String origen,boolean habla) {
         super(nombre, edad, estado, fechanac, pico, vuela);
         this.origen = origen;
@@ -17,6 +27,10 @@ public class Loro extends Aves {
     }
 
     @Override
+    /**
+     * Imprime todos los datos del loro [Nombre,edad,estado,nacido,habla]
+     * 
+     */
     public void muestra() {
         
         String palabracorta;

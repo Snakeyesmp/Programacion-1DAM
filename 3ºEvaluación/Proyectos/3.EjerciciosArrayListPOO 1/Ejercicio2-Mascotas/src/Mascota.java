@@ -1,3 +1,6 @@
+/**
+ * Clase padre mascota
+ */
 public abstract class Mascota {
 
     private String nombre, estado;
@@ -49,10 +52,10 @@ public abstract class Mascota {
     }
     /**
      * 
-     * @param nombre
-     * @param edad
-     * @param estado
-     * @param fechanac
+     * @param nombre el nombre de la mascota
+     * @param edad el numero de años de la mascota
+     * @param estado como se encuentra la mascota
+     * @param fechanac año-mes-dia de nacimiento de la mascota
      */
     public Mascota(String nombre, int edad, String estado, String fechanac) {
         this.nombre = nombre;
