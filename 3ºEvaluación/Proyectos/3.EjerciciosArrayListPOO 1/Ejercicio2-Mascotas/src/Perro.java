@@ -1,3 +1,6 @@
+/**
+ * Clase perro, heredada de mascota
+ */
 public class Perro extends Mascota {
 
     private String raza;
@@ -9,12 +12,12 @@ public class Perro extends Mascota {
     /**
      * Constructor de perro
      * 
-     * @param nombre
-     * @param edad
-     * @param estado
-     * @param fechanac
-     * @param raza
-     * @param pulgas
+     * @param nombre Nombre del perro
+     * @param edad Numero de años del perro
+     * @param estado Como se encuentra el perro
+     * @param fechanac año-mes-dia de nacimiento
+     * @param raza Que raza es el perro
+     * @param pulgas Si el perro tiene pulgas o no
      */
     public Perro(String nombre, int edad, String estado, String fechanac, String raza, boolean pulgas) {
         super(nombre, edad, estado, fechanac);
@@ -23,6 +26,9 @@ public class Perro extends Mascota {
     }
     
     @Override
+    /**
+     * Imprime todos los datos del perro [nombre,edad,estado,nacido,raza,pulgas]
+     */
     public void muestra() {
   
         String palabracorta;

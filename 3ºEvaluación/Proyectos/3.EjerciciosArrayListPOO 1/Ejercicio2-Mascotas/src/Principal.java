@@ -1,4 +1,3 @@
-import java.util.ArrayList;
 import java.util.Scanner;
 /**
  * Clase main en la que se crearán varios objetos de tipo mascota, y el menú para que el usuario opere

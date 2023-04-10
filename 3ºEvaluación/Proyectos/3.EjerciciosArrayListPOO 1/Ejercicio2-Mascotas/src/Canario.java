@@ -1,3 +1,6 @@
+/**
+ * Clase canario, extendida de aves, a su vez extendida de mascotas
+ */
 public class Canario extends Aves {
     private String color;
     private boolean canta;
@@ -9,7 +12,18 @@ public class Canario extends Aves {
     public void volar() {
         System.out.println("*vuela*");
     }
-
+    /**
+     * Constructor para el canario
+     * 
+     * @param nombre El nombre del canario
+     * @param edad El numero de años del canario
+     * @param estado Como se encuentra el canario
+     * @param fechanac año-mes-dia de nacimiento del canario
+     * @param pico Color del pico del canario
+     * @param vuela Si vuela o no el canario
+     * @param color Color del plumaje del canario
+     * @param canta Si canta o no el canario
+     */
     public Canario(String nombre, int edad, String estado, String fechanac, String pico, boolean vuela, String color,
             boolean canta) {
         super(nombre, edad, estado, fechanac, pico, vuela);
@@ -18,6 +32,9 @@ public class Canario extends Aves {
     }
 
     @Override
+    /**
+     * Mostrar los datos del canario [Nombre,Edad,Estado,Nacido,Color,Canta]
+     */
     public void muestra() {
 
         String palabracorta;

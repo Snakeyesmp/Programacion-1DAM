@@ -4,7 +4,7 @@ import java.util.ArrayList;
  * 
  */
 public class Inventario {
-
+    
     private static ArrayList<Mascota> listadoAnimales = new ArrayList<Mascota>();
 
     public Inventario() {
@@ -32,7 +32,7 @@ public class Inventario {
     /** 
      * Metodo que recibe un String con el nombre del animal, lo busca en el array y lo elimina
      * 
-     * @param nombre
+     * @param nombre el nombre del animal a eliminar
      */
     public static void eliminarUnAnimal(String nombre) {
         for (int j = 0; j < listadoAnimales.size(); j++) {
@@ -44,7 +44,7 @@ public class Inventario {
     /**
      * Muestra los datos de un animal específico, según el nombre que haya recibido
      * 
-     * @param nombre
+     * @param nombre el nombre del animal a mostrar datos
      */
     public static void mostrarDatosUnAnimal(String nombre) {
         for (int j = 0; j < listadoAnimales.size(); j++) {
@@ -56,7 +56,7 @@ public class Inventario {
     /**
      * Inserta un objeto del tipo mascota en el arraylist
      * 
-     * @param mascota
+     * @param mascota el objeto mascota que se va a introducir en el arraylist
      */
     public void insertarAnimal(Mascota mascota) {
         listadoAnimales.add(mascota);
