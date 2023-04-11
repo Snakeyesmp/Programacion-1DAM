@@ -19,7 +19,7 @@ public class Ejercicio01 {
 
         codigosPostales.put(46001, "Valencia");
         codigosPostales.put(46002, "Alicante");
-        codigosPostales.put(47001, "Zamora");
+        codigosPostales.put(47001, "Zaragoza");
         codigosPostales.put(47002, "Teruel");
         codigosPostales.put(48001, "Barcelona");
         codigosPostales.put(48002, "Tarragona");
@@ -41,8 +41,10 @@ public class Ejercicio01 {
         
         // Eliminar las provincias Barcelona,Alicante y Zaragoza
 
-        codigosPostales.remove();
-
+        codigosPostales.remove(48001); // Borrar Barcelona
+        codigosPostales.remove(46002); // Borrar Alicante
+        codigosPostales.remove(47001); // Borrar Zaragoza
+        
         // Volver a mostrar los datos de pantalla
         System.out.println(codigosPostales);
     }

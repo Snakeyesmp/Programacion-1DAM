@@ -1,3 +1,3 @@
 ## Ejercicio 4
 
-Primera práctica en la que se utilizan hashmap
+Primera practica con 5 ejercicios en los que se utilizan los HashMap, sin objetos.
