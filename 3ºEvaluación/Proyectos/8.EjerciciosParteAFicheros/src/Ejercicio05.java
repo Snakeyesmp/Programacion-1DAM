@@ -17,13 +17,12 @@ public class Ejercicio05 {
     public static void main(String[] args) {
         // Se crea un archivo con la ruta de la carpeta documentos
         File archivoABorrar = new File("Documentos");
-
+        // Se ejecuta el metodo borrar todo con el fichero creado arriba, muestra un mensaje dependiendo de si se ha podido o no borrar la carpetae
         if (borraTodo(archivoABorrar)) {
             System.out.println("La carpeta se ha eliminado correctamente");
         } else {
             System.out.println("No se ha podido eliminar la carpeta");
         }
-
     }
 
     /**

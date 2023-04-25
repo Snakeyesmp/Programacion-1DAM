@@ -20,14 +20,18 @@ public class Ejercicio02 {
             double notaSuma = 0;
             double notaMedia = 0;
             int numNotas = 0;
-            while (sc.hasNextInt()) {
 
+            while (sc.hasNextInt()) {
                 notaSuma = notaSuma + sc.nextInt();
+                System.out.println(notaSuma);
                 numNotas++;
             }
+
             notaMedia = (notaSuma / numNotas);
 
             System.out.println(notaMedia);
+
+            sc.close();
 
         } catch (FileNotFoundException e) {
 
