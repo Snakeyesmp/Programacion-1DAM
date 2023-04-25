@@ -10,19 +10,19 @@ public class Ejercicio01 {
     public static void main(String[] args) {
 
         File archNumeros = new File("Documentos/numeros.txt");
-        int numMax = 0, numMin = 999999;
+        int numMax = 0, numMin = 999999999;
 
         try {
             // Scanner en el archivo en el que se encuentran los numeros
             Scanner sc = new Scanner(archNumeros);
 
             while (sc.hasNextInt()) {
-                int numero = sc.nextInt();
-                if (numero > numMax) {
-                    numMax = numero;
+                int numeroAux = sc.nextInt();
+                if (numeroAux > numMax) {
+                    numMax = numeroAux;
                 }
-                if (numero < numMin) {
-                    numMin = numero;
+                if (numeroAux < numMin) {
+                    numMin = numeroAux;
                 }
             }
 

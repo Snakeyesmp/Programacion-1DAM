@@ -1,5 +1,7 @@
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.text.DecimalFormat;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -11,32 +13,42 @@ import java.util.Scanner;
  */
 public class Ejercicio02 {
     public static void main(String[] args) {
-
-        File notasAlumnos = new File("documentos/alumnos_notas.txt");
+        DecimalFormat df = new DecimalFormat("#.00");
+        String nombre, apellido, linea; // Creaciones de variables String
+        double media, suma; // Creaciones de las variables de tipo double
 
         try {
+            File fichero = new File("Documentos/alumnos_notas.txt"); // Se crea un fichero con el archivo con las notas
+            Scanner lector = new Scanner(fichero); // Se crea un scanner para el fichero creado
+            do {
+                media = 0;
+                suma = 0;
+                linea = lector.nextLine(); // Variable que contenga la linea del scanner
+                String parte[] = linea.split(" "); // Se divide el String en 2, teniendo en cuenta el
+                                                   // espacio(Nombre,apellido)
+                nombre = parte[0]; // Primera parte antes del espacio(Nombre)
+                apellido = parte[1]; // Segunda parte después de espacio(Apellido)
 
-            Scanner sc = new Scanner(notasAlumnos);
-            double notaSuma = 0;
-            double notaMedia = 0;
-            int numNotas = 0;
+                String nombreCompleto= nombre + " " + apellido;
 
-            while (sc.hasNextInt()) {
-                notaSuma = notaSuma + sc.nextInt();
-                System.out.println(notaSuma);
-                numNotas++;
-            }
+                for (int i = 2; i < parte.length; i++) { // For a partir del segundo split, para no contar el nombre y
+                                                         // el apellido
 
-            notaMedia = (notaSuma / numNotas);
+                    int numero = Integer.valueOf(parte[i]); // se coge el numero de cada split
+                    suma = suma + numero; // Se va sumando el numero de cada split
 
-            System.out.println(notaMedia);
+                }
+                media = suma / (parte.length - 2); // Se hace la media, contando la cantidad de splits que hay y
+                                                   // restando 2 del nombre y del apellido
 
-            sc.close();
+                System.out.println(
+                        "Nombre completo : " + nombreCompleto + "\nNota media: " + df.format(media) + "\n"); // Se imprime el nombre del alumno junto a su nota
 
-        } catch (FileNotFoundException e) {
+            } while (lector.hasNextLine());
+            lector.close();
 
-            System.out.println("El archivo no se ha encontrado");
+        } catch (FileNotFoundException ex) {
+            System.err.println("ERROR. La ruta no existe"); 
         }
-
     }
 }
